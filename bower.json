@@ -1,0 +1,29 @@
+{
+  "name": "angular-hamburglar",
+  "version": "1.0.0",
+  "homepage": "https://github.com/EladBezalel/angular-hamburglar",
+  "authors": [
+    "Elad Bezalel <elad.bezalel@gmail.com>"
+  ],
+  "main": [
+    "dist/hamburglar.min.js",
+    "dist/hamburglar.min.css"
+  ],
+  "description": "Angular directive for hamburger icon",
+  "keywords": [
+    "angular",
+    "directive",
+    "hamburger",
+    "hamburglar",
+    "icon",
+    "button"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

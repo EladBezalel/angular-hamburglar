@@ -1,0 +1,193 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+// spacing + background-color
+.hamburglar {
+  -webkit-touch-callout: none;
+  user-select: none;
+
+  .burger-bun-top {
+    animation: bun-top-in linear normal;
+    animation-fill-mode: forwards;
+  }
+  .burger-bun-bot {
+    animation: bun-bot-in linear normal;
+    animation-fill-mode: forwards;
+  }
+  .burger-filling {
+    animation: burger-fill-in linear normal;
+    animation-fill-mode: forwards;
+  }
+
+  &.opened {
+    .burger-bun-top {
+      animation: bun-top-out linear normal;
+      animation-fill-mode: forwards;
+    }
+    .burger-bun-bot {
+      animation: bun-bot-out linear normal;
+      animation-fill-mode: forwards;
+    }
+    .burger-filling {
+      animation: burger-fill-out linear normal;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  .burger-container {
+    position: relative;
+    height: 28px;
+    width: 36px;
+  }
+
+  .burger-bun-top,
+  .burger-bun-bot,
+  .burger-filling {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 36px;
+    border-radius: 2px;
+  }
+
+  .burger-bun-top {
+    top: 0;
+    transform-origin: 34px 2px;
+  }
+
+  .burger-bun-bot {
+    bottom: 0;
+    transform-origin: 34px 2px;
+  }
+
+  .burger-filling {
+    top: 11px;
+  }
+}
+
+@keyframes bun-top-out {
+  0% {
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    top: 0;
+    transform: rotate(15deg);
+  }
+  80% {
+    left: -5px;
+    top: 0;
+    transform: rotate(-55deg);
+  }
+  100% {
+    left: -5px;
+    top: 1px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes bun-bot-out {
+  0% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    transform: rotate(-15deg);
+  }
+  80% {
+    left: -5px;
+    transform: rotate(55deg);
+  }
+  100% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes bun-top-in {
+  0% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(-45deg);
+  }
+  20% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(-60deg);
+  }
+  80% {
+    left: 0;
+    bot: 0;
+    transform: rotate(10deg);
+  }
+  100% {
+    left: 0;
+    bot: 1px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bun-bot-in {
+  0% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+  20% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(60deg);
+  }
+  80% {
+    left: 0;
+    bot: 0;
+    transform: rotate(-10deg);
+  }
+  100% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes burger-fill-in {
+  0% {
+    width: 0;
+    left: 36px;
+  }
+  40% {
+    width: 0;
+    left: 40px;
+  }
+  80% {
+    width: 36px;
+    left: -6px;
+  }
+  100% {
+    width: 36px;
+    left: 0;
+  }
+}
+
+@keyframes burger-fill-out {
+  0% {
+    width: 36px;
+    left: 0;
+  }
+  20% {
+    width: 42px;
+    left: -6px;
+  }
+
+  40% {
+    width: 0;
+    left: 40px;
+  }
+
+  100% {
+    width: 0;
+    left: 36px;
+  }
+}

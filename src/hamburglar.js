@@ -3,10 +3,11 @@ angular.module('angular-hamburglar', [])
   .directive('hamburglar', function () {
     return {
       restrict: 'E',
+      replace: true,
       scope: {
-        color: '=',
-        speed: '=',
-        scale: '='
+        color: '@',
+        speed: '@',
+        scale: '@'
       },
       templateUrl: 'hamburglar.html',
       link: function (scope) {

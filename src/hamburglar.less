@@ -8,29 +8,41 @@
   user-select: none;
 
   .burger-bun-top {
-    animation: bun-top-in linear normal;
+    animation-name: bun-top-in;
+    animation-timing-function: linear;
+    animation-direction: normal;
     animation-fill-mode: forwards;
   }
   .burger-bun-bot {
-    animation: bun-bot-in linear normal;
+    animation-name: bun-bot-in;
+    animation-timing-function: linear;
+    animation-direction: normal;
     animation-fill-mode: forwards;
   }
   .burger-filling {
-    animation: burger-fill-in linear normal;
+    animation-name: bun-fill-in;
+    animation-timing-function: linear;
+    animation-direction: normal;
     animation-fill-mode: forwards;
   }
 
   &.opened {
     .burger-bun-top {
-      animation: bun-top-out linear normal;
+      animation-name: bun-top-out;
+      animation-timing-function: linear;
+      animation-direction: normal;
       animation-fill-mode: forwards;
     }
     .burger-bun-bot {
-      animation: bun-bot-out linear normal;
+      animation-name: bun-bot-out;
+      animation-timing-function: linear;
+      animation-direction: normal;
       animation-fill-mode: forwards;
     }
     .burger-filling {
-      animation: burger-fill-out linear normal;
+      animation-name: bun-fill-out;
+      animation-timing-function: linear;
+      animation-direction: normal;
       animation-fill-mode: forwards;
     }
   }

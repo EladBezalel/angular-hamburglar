@@ -9,10 +9,12 @@ var ngAnnotate = require('gulp-ng-annotate');
 var concat = require('gulp-concat');
 var templateCache = require('gulp-angular-templatecache');
 var addsrc = require('gulp-add-src');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('less', function () {
   gulp.src('./src/*.less')
     .pipe(less())
+    .pipe(autoprefixer())
     .pipe(gulp.dest('./dist/'))
     .pipe(minifyCSS())
     .pipe(rename({

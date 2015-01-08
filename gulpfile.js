@@ -8,8 +8,8 @@ var rename = require('gulp-rename');
 var ngAnnotate = require('gulp-ng-annotate');
 var concat = require('gulp-concat');
 var templateCache = require('gulp-angular-templatecache');
-var addsrc = require('gulp-add-src');
 var autoprefixer = require('gulp-autoprefixer');
+var streamqueue = require('streamqueue');
 
 gulp.task('less', function () {
   gulp.src('./src/*.less')
@@ -24,18 +24,18 @@ gulp.task('less', function () {
 });
 
 gulp.task('js', function() {
-
-  gulp.src('./src/*.html')
+  var template = gulp.src('./src/*.html')
     .pipe(minifyHTML())
     .pipe(templateCache({'module': 'angular-hamburglar'}))
     .pipe(rename({
       basename: 'hamburglar',
       suffix: '.template'
-    }))
-    .pipe(gulp.dest('./src/'));
+    }));
 
-  gulp.src('./src/*.js')
-    .pipe(ngAnnotate())
+  var js = gulp.src('./src/*.js')
+    .pipe(ngAnnotate());
+
+  streamqueue({ objectMode: true }, js, template )
     .pipe(concat('hamburglar.js'))
     .pipe(gulp.dest('./dist/'))
     .pipe(uglify())

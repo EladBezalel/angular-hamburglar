@@ -17,4 +17,3 @@ angular.module('angular-hamburglar', [])
       }
     };
   });
-angular.module("angular-hamburglar").run(["$templateCache", function($templateCache) {$templateCache.put("hamburglar.html","<div class=hamburglar ng-style=\"{ \'transform\' : \'scale(\' + scale + \')\' }\"><div class=burger-icon><div class=burger-container><span class=burger-bun-top ng-style=\"{ \'background\' : color, \'animation-duration\': speed, \'-webkit-animation-duration\': speed }\"></span> <span class=burger-filling ng-style=\"{ \'background\' : color, \'animation-duration\': speed, \'-webkit-animation-duration\': speed }\"></span> <span class=burger-bun-bot ng-style=\"{ \'background\' : color, \'animation-duration\': speed, \'-webkit-animation-duration\': speed }\"></span></div></div></div>");}]);

@@ -31,8 +31,8 @@
           animation-fill-mode: forwards;
 }
 .hamburglar .burger-filling {
-  -webkit-animation-name: bun-fill-in;
-          animation-name: bun-fill-in;
+  -webkit-animation-name: burger-fill-in;
+          animation-name: burger-fill-in;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-direction: normal;
@@ -61,8 +61,8 @@
           animation-fill-mode: forwards;
 }
 .hamburglar.opened .burger-filling {
-  -webkit-animation-name: bun-fill-out;
-          animation-name: bun-fill-out;
+  -webkit-animation-name: burger-fill-out;
+          animation-name: burger-fill-out;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-direction: normal;

@@ -22,10 +22,17 @@ gulp.task('less', function () {
 });
 
 gulp.task('js', function() {
+
   gulp.src('./src/*.html')
     .pipe(minifyHTML())
     .pipe(templateCache({'module': 'angular-hamburglar'}))
-    .pipe(addsrc('./src/*.js'))
+    .pipe(rename({
+      basename: 'hamburglar',
+      suffix: '.template'
+    }))
+    .pipe(gulp.dest('./src/'));
+
+  gulp.src('./src/*.js')
     .pipe(ngAnnotate())
     .pipe(concat('hamburglar.js'))
     .pipe(gulp.dest('./dist/'))

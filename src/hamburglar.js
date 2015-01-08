@@ -1,5 +1,4 @@
 'use strict';
-
 angular.module('angular-hamburglar', [])
   .directive('hamburglar', function () {
     return {

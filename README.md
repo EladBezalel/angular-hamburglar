@@ -5,6 +5,7 @@ Quick Links:
 
 *  [Demos](#demos)
 *  [Installing](#installing)
+*  [Usage](#usage)
 *  [Credits](#credits)
 
 ## <a name="demos"></a> Demos
@@ -27,6 +28,21 @@ Change to your project's root directory.
 bower install angular-hamburglar
 
 ```
+
+## <a name="usage"></a> Usage
+
+```html
+
+<hamburglar ng-class="{'opened' : isNavIconOpened}" scale="0.5"></hamburglar>
+
+```
+
+Add **opened** class to hamburglar to make it work!
+
+### api
+- **scale** - The size of the icon
+- **color** - Any color you can think of!
+- **speed** - The speed of the animation (500ms, 1s etc..)
 
 ## <a name="credits"></a> Credits
 

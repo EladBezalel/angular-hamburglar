@@ -1,6 +1,6 @@
 {
   "name": "angular-hamburglar",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Angular directive for hamburger icon",
   "devDependencies": {
     "gulp": "~3.8.10",
